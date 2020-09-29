@@ -35,11 +35,12 @@ INSERT INTO ProfessorTurma (Descricao, IdUsuario, IdTurma) VALUES
 
 -- Inserindo valores a tabela Perfil
 INSERT INTO Perfil (Permissao) VALUES
-	('');
+	('Admin')
+	('Padrao');
 
 -- Inserindo valores a tabela Usuario
-INSERT INTO Usuario (Nome, Email, Senha, DataCadastro, DataUltimoAcesso, IdPerfil) VALUES
-	('Maria Eduarda', 'Maria@Email.com', '13212123132', '2020-09-23T12:00:00', '2020-09-24T00:00:00', 1);
+INSERT INTO Usuario (Nome, Email, Senha, DataCadastro, DataUltimoAcesso) VALUES
+	('Gustavo Carvalho', 'Gustavo@Email.com', '19042003', '2020-09-23T12:00:00', '2020-09-24T00:00:00');
 
 -- Inserindo valores a tabela AlunoTurma
 INSERT INTO AlunoTurma (Matricula, IdUsuario, IdTurma) VALUES
