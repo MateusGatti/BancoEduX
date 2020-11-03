@@ -9,11 +9,11 @@ INSERT INTO Instituicao (Nome, Logradouro, Numero, Bairro, Cidade, Complemento, 
 
 -- Inserindo valores a tabela Curso
 INSERT INTO Curso (Titulo, IdInstituicao) VALUES
-	('Multímidia', '6B613A27-0122-4E44-91DC-FE9C02A725EE')
+	('Multímidia', '4E2869E9-7FD2-40E7-9972-A3DFCD156DC2')
 	
 -- Inserindo valores a tabela Turma
 INSERT INTO Turma (Descricao, IdCurso) VALUES
-	('2S2020S3', '1FC772A2-3CEE-475E-AC70-E753A74DA601');
+	('2S2020S3', '1401D407-FD66-46EC-874C-40E8084FD353');
 
 -- Inserindo valores a tabela Categoria
 INSERT INTO Categoria (Tipo) VALUES
@@ -23,7 +23,7 @@ INSERT INTO Categoria (Tipo) VALUES
 
 -- Inserindo valores a tabela Objetivo
 INSERT INTO Objetivo (Descricao, IdCategoria) VALUES
-	('Identificar as características de banco de dados relacionais e não-relacionais', '4D804F71-C19D-4CD5-BC28-BF1157E261AB');
+	('Identificar as características de banco de dados relacionais e não-relacionais', '15E408A7-0081-40C1-BE91-68D564EAA5A4');
 
 -- Inserindo valores a tabela Perfil
 INSERT INTO Perfil (Permissao) VALUES
@@ -31,33 +31,31 @@ INSERT INTO Perfil (Permissao) VALUES
 	('Padrao');
 	
 -- Inserindo valores a tabela Usuario
-INSERT INTO Usuario (Nome, Email, Senha, DataCadastro, DataUltimoAcesso, IdPerfil) VALUES
-	('Gustavo Carvalho', 'Gustavo@Email.com', '19042003', '2020-09-23T12:00:00', '2020-09-24T00:00:00', 'AD08C885-2B41-4A96-BA09-DD0EEED68258');
-
--- Inserindo valores a tabela Usuario
-INSERT INTO Usuario (Nome, Email, Senha, DataCadastro, DataUltimoAcesso, IdPerfil) VALUES
-	('Paulo Brandão', 'Paulo@Email.com', '19042003', '2020-09-23T12:00:00', '2020-09-24T00:00:00', 'AD08C885-2B41-4A96-BA09-DD0EEED68258');
-
+INSERT INTO Usuario (Nome, Email, Senha, Pontuacao, DataCadastro, DataUltimoAcesso, IdPerfil) VALUES
+    ('Gustavo Carvalho', 'Gustavo@Email.com', '19042003', '180', '2020-09-23T12:00:00', '2020-09-24T00:00:00', 'AE8D4667-3C1D-42D0-9B24-4E6D01F78D6A');
 
 -- Inserindo valores a tabela AlunoTurma
 INSERT INTO AlunoTurma (Matricula, IdUsuario, IdTurma) VALUES
-	('48941897', '68942E89-A6D3-4A6A-8A09-BC02364BE8FD', 'B25BC934-B48F-4F7A-8C86-3F4C6D23C529');
-
+	('48941897', '9237BB6C-B1B6-44E9-BA00-3E0EF19AFA6F', '33C7BCBA-0ED0-4ABC-AF6F-BF5C531CDF81');
 
 -- Inserindo valores a tabela ObjetivoAluno
-INSERT INTO ObjetivoAluno(Nota, DataAlcancado, IdAlunoTurma, IdOBjetivo)
-VALUES ('10', '2020-09-12T12:00:00', '954C188A-B0B4-4A07-BC53-8E6512DF0C0C', '01D5EFCD-F48F-4B7A-B3CC-3C1D1BC7D219');
+INSERT INTO ObjetivoAluno(Nota, DataAlcancado, IdAlunoTurma, IdObjetivo)
+VALUES ('10', '2020-09-12T12:00:00', '6B4E9FD5-8E00-4319-A5F0-9839FEC5EDE0', '8C4C469E-0B31-4914-91D9-3BCB8D937CDF');
 
 -- Inserindo valores a tabela ProfessorTurma
 INSERT INTO ProfessorTurma (Descricao, IdUsuario, IdTurma) VALUES
-	('Professor responsável pela turma A', 'A45A6E6B-4513-4E8D-AD03-C3A0F4E1719A', 'B25BC934-B48F-4F7A-8C86-3F4C6D23C529');
+	('Professor responsável pela turma A', '9237BB6C-B1B6-44E9-BA00-3E0EF19AFA6F', '33C7BCBA-0ED0-4ABC-AF6F-BF5C531CDF81');
 
 -- Inserindo valores a tabela Dica
 INSERT INTO Dica(Texto, Imagem, IdUsuario)
-VALUES ('Texto da Dica', 'DicaImagem.png', '68942E89-A6D3-4A6A-8A09-BC02364BE8FD');
+VALUES ('Texto da Dica', 'DicaImagem.png', '9237BB6C-B1B6-44E9-BA00-3E0EF19AFA6F');
+
+-- Inserindo valores a tabela Postagem
+INSERT INTO Postagem(Texto, Imagem, IdUsuario)
+VALUES ('Texto da Postagem', 'PostagemImagem.png', '9237BB6C-B1B6-44E9-BA00-3E0EF19AFA6F');
 
 -- Inserindo valores a tabela Curtida
 INSERT INTO Curtida(IdUsuario, IdDica)
-VALUES ('68942E89-A6D3-4A6A-8A09-BC02364BE8FD', '9A0786D3-BAB9-471C-8D8F-F1A7A48A7D88');
+VALUES ('9237BB6C-B1B6-44E9-BA00-3E0EF19AFA6F', 'F0A62FDC-8B09-4116-BD15-DE9BC5894B1A');
 
 
